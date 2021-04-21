@@ -29,6 +29,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.VendaID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", "Venda", new { id = Model.VendaID }, new { @class = "btn btn-success" })
+    @Html.ActionLink("Listar todos", "Index", "Venda", new { id = Model.VendaID }, new { @class = "btn btn-primary" })    
 </p>

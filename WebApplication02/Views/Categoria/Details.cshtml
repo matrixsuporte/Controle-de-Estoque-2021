@@ -4,23 +4,21 @@
     ViewBag.Title = "Detalhes";
 }
 
-<h2>Detalhes</h2>
+<h2>Detalhe das Categorias</h2>
 
 <div>
     <h4>Categoria</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
+        <dt>@Html.DisplayNameFor(model => model.CategoriaID)</dt>
+        <dt>@Html.DisplayNameFor(model => model.Nome)</dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
+        <dd>@Html.DisplayFor(model => model.CategoriaID)</dd>
+        <dd>@Html.DisplayFor(model => model.Nome)</dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Editar", "Edit", new { id = Model.CategoriaID }) |
-    @Html.ActionLink("Listar todos", "Index")
+    @Html.ActionLink("Editar", "Edit", "Categoria", new { id = Model.CategoriaID }, new { @class = "btn btn-success" })
+    @Html.ActionLink("Listar todos", "Index", "Categoria", new { id = Model.CategoriaID }, new { @class = "btn btn-primary" })
 </p>

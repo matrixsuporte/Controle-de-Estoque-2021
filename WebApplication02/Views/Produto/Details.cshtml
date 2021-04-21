@@ -1,42 +1,24 @@
 ﻿@model WebApplication02.Models.Produto
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalhar";
 }
 
-<h2>Details</h2>
+<h2>Detalhe dos produtos</h2>
 
 <div>
     <h4>Produto</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Categoria.Nome)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Categoria.Nome)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Preco)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Preco)
-        </dd>
-
+        <dt>@Html.DisplayNameFor(model => model.Categoria.Nome)</dt>
+        <dd>@Html.DisplayFor(model => model.Categoria.Nome)</dd>
+        <dt>@Html.DisplayNameFor(model => model.Nome)</dt>
+        <dd>@Html.DisplayFor(model => model.Nome)</dd>
+        <dt>@Html.DisplayNameFor(model => model.Preco)</dt>
+        <dd>@Html.DisplayFor(model => model.Preco)</dd>
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ProdutoID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", "Produto", new { id = Model.ProdutoID }, new { @class = "btn btn-success" })
+    @Html.ActionLink("Listar todos", "Index", "Produto", new { id = Model.ProdutoID }, new { @class = "btn btn-primary" })
 </p>
